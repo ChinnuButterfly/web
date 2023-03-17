@@ -1,5 +1,5 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:103230870745:task-definition/webapp:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:103230870745:task-definition/webapp:2",
     "containerDefinitions": [
         {
             "name": "webapp",
@@ -23,7 +23,7 @@
     "taskRoleArn": "arn:aws:iam::103230870745:role/ecsTaskExecutionRole",
     "executionRoleArn": "arn:aws:iam::103230870745:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 1,
+    "revision": 2,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -53,7 +53,7 @@
     ],
     "cpu": "256",
     "memory": "512",
-    "registeredAt": "2023-03-16T17:56:31.596Z",
+    "registeredAt": "2023-03-17T05:14:25.296Z",
     "registeredBy": "arn:aws:iam::103230870745:user/webapp",
     "tags": []
 }
