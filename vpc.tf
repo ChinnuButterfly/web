@@ -57,6 +57,29 @@ resource "aws_security_group" "security_group" {
       security_groups = []
       self = false
     }]
+}
+resource "aws_internet_gateway" "ig" {
+  vpc_id = aws_vpc.webapp_vpc.id
+  
+}
 
+resource "aws_route_table" "rt" {
 
+  vpc_id =  aws_vpc.webapp_vpc.id
+
+  route {
+    cidr_block = "0.0.0.0/0"
+    gateway_id = aws_internet_gateway.ig.id
+  }
+
+  route {
+    ipv6_cidr_block = "::/0"
+    gateway_id      = aws_internet_gateway.ig.id
+  }
+  
+}
+
+resource "aws_route_table_association" "route" {
+  route_table_id = aws_route_table.rt.id
+  subnet_id      = aws_subnet.subnet1.id
 }
