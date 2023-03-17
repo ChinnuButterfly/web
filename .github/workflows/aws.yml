@@ -33,7 +33,7 @@ jobs:
       - name: Build, tag, and push image to Amazon ECR
         id: build-image
         env:
-          ECR_REGISTRY: "103230870745.dkr.ecr.us-east-2.amazonaws.com"
+          ECR_REGISTRY: "103230870745.dkr.ecr.us-east-1.amazonaws.com"
           ECR_REPOSITORY: "webapp_repo"
           IMAGE_TAG: latest
         run: |
